@@ -34,3 +34,20 @@ function mostrarLista() {
         lista.appendChild(li);
     }
 }
+
+
+// Sortear un amigo al azar
+function sortearAmigo() {
+    if (listaGuardarAmigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return;
+    }
+
+    // Generar índice aleatorio
+    let indiceAleatorio = Math.floor(Math.random() * listaGuardarAmigos.length);
+    let amigoSecreto = listaGuardarAmigos[indiceAleatorio];
+
+    // Mostrar el resultado
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li> El amigo secreto es: <strong>${amigoSecreto}</strong></li>`;
+}
